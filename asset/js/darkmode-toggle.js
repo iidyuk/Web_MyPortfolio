@@ -73,9 +73,9 @@ function applyDarkMode() {
 function updateButtonText() {
   const modeButton = document.getElementById("mode");
   if (document.documentElement.classList.contains('dark')) {
-    modeButton.innerHTML = '<i class="fa-solid fa-sun"></i>&nbsp;Light';
+    modeButton.innerHTML = '<i class="fa-solid fa-sun"></i>';
   } else {
-    modeButton.innerHTML = '<i class="fa-solid fa-moon"></i>&nbsp;Dark';
+    modeButton.innerHTML = '<i class="fa-solid fa-moon"></i>';
   }
 }
 
@@ -84,11 +84,11 @@ function toggleDarkMode() {
   // ボタンのテキストを先に更新（即座に反応）
   if (document.documentElement.classList.contains('dark')) {
     // 現在がダークモードの場合、ライトモードに切り替え
-    document.getElementById("mode").innerHTML = '<i class="fa-solid fa-moon"></i>&nbsp;Dark';
+    document.getElementById("mode").innerHTML = '<i class="fa-solid fa-moon"></i>';
     applyLightMode();
   } else {
     // 現在がライトモードの場合、ダークモードに切り替え
-    document.getElementById("mode").innerHTML = '<i class="fa-solid fa-sun"></i>&nbsp;Light';
+    document.getElementById("mode").innerHTML = '<i class="fa-solid fa-sun"></i>';
     applyDarkMode();
   }
 }
