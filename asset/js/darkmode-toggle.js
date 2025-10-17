@@ -20,8 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // 保存された設定がある場合はそれを適用
     if (savedTheme === 'dark') {
       applyDarkMode();
+      console.log("dark mode time 20:00-7:00");
     } else {
       applyLightMode();
+      console.log("light mode time 7:00-20:00");
     }
   } else {
     // 保存された設定がない場合は時間に基づいて初期設定
