@@ -49,6 +49,7 @@ function applyLightMode() {
   
   setTimeout(function() {
     document.documentElement.classList.remove('dark');
+    document.documentElement.classList.add('light');
     document.body.classList.remove('changelight');
     document.getElementById("title").classList.remove('changelight');
     document.getElementById("mode").classList.remove('changelight');
@@ -57,16 +58,17 @@ function applyLightMode() {
   
   // ローカルストレージに設定を保存
   localStorage.setItem('theme', 'light');
-  console.log("ライトモードに切り替えました");
+  // console.log("ライトモードに切り替えました");
 }
 
 // ↓ ダークモードを適用する関数 ↓
 function applyDarkMode() {
+  document.documentElement.classList.remove('light');
   document.documentElement.classList.add('dark');
   
   // ローカルストレージに設定を保存
   localStorage.setItem('theme', 'dark');
-  console.log("ダークモードに切り替えました");
+  // console.log("ダークモードに切り替えました");
 }
 
 // ↓ ボタンのテキストを更新する関数 ↓
